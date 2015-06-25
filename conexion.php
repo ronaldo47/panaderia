@@ -42,6 +42,19 @@ class conexion {
 echo '<h1><big>Cotizacion Insertada</big></h1>'; 
        
         }
+        
+   function insertar_factura ($id,$docu,$serial,$cant,$precio,$nombre,$fecha){
+		
+		 $query="INSERT INTO `ejercicio`.`factura` (`id`, `documento`, `serial_producto`, `cantidad`, `precio`, `nombre_producto`, `fecha`) VALUES ('".$id."', '".$docu."', '".$serial."', '".$cant."', '".$precio."', '".$nombre."', '".$fecha."')";
+		mysql_query($query);
+		echo '<script type="text/javascript"> 
+		alert("DATOS REGISTRADOS");
+		window.open("index.html","_self");
+		
+		</script>';
+		}     
+        
+        
 }
 
 
