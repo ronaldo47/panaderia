@@ -49,11 +49,17 @@ echo '<h1><big>Cotizacion Insertada</big></h1>';
 		echo '<h1><big>Registro Exitoso :)</big></h1>';
 		}
 		
-	function insertarProovedor($producto, $empresa)
-      	{
-  		$query = "INSERT INTO proovedor(producto, nombre_empresa) VALUES ('".$producto."','".$nombre_empresa."')";
-  		mysql_query($query);
-  	}
+		 function insertarfactura ($id,$docu,$serial,$cant,$precio,$nombre,$fecha){
+		
+		 $query="INSERT INTO `ejercicio`.`factura` (`id`, `documento`, `serial_producto`, `cantidad`, `precio`, `nombre_producto`, `fecha`) VALUES ('".$id."', '".$docu."', '".$serial."', '".$cant."', '".$precio."', '".$nombre."', '".$fecha."')";
+		mysql_query($query);
+		echo '<script type="text/javascript"> 
+		alert("DATOS REGISTRADOS");
+		window.open("index.html","_self");
+		
+		</script>';
+		}
+		
 }
 
 
