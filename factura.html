@@ -1,10 +1,12 @@
 <html>
 <head>
 <style type="text/css"> 
-form{margin-left:0 auto;}
+#formulario{width:500px; background:#BB2124; margin-left:700px;}
+input, label {width:250px; margin-left:100px; padding:5px;}
 
-input {width:250px;}
 button {width:100px; height:30px;}
+h1{text-align:center;}
+
 </style>
 <meta charset="utf-8">
 <title>Documento sin título</title>
@@ -16,8 +18,8 @@ button {width:100px; height:30px;}
 
 <table align="center">
 <pre>
-<form id="fom" action="factura.php"  method="post" target=""> 
-<label for="id">Ingrese el numero de la factura</label>
+<form id="fom" action="factura.php"  method="post" target="_self"> 
+<label for="id" >Ingrese el numero de la factura</label>
 <input type="text" id="id" name="id" placeholder="Id factura">
 
 <label for="docu">Ingrese el Documento del cliente</label>
@@ -38,7 +40,7 @@ button {width:100px; height:30px;}
 <label for="fecha">Ingrese la fecha</label>
 <input type="text" id="fecha" name="fecha" placeholder="Fecha">
  
-<button type="submit"> Enviar </button>
+<input type="submit" id="" value="Enviar">
 </form>
 </pre>
 </table>
@@ -50,3 +52,4 @@ button {width:100px; height:30px;}
 <footer id="pie"> </footer>
 </body>
 </html>
+
